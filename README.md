@@ -1,5 +1,7 @@
 # Midler
 
+[![Build Status](https://travis-ci.org/film42/midler.svg)](https://travis-ci.org/film42/midler)
+
 This is a fork of [Middleware](https://github.com/mitchellh/middleware) that allows multiple env arguments, and is fully backward compatible. Refer to the parent gem for additional documentation.
 
 ![Recite: "boil, boil, toil and trouble..."](midler.jpg)
