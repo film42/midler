@@ -1,13 +1,15 @@
-# MiddlewareVariadic
+# Midler
 
 This is a fork of [Middleware](https://github.com/mitchellh/middleware) that allows multiple env arguments, and is fully backward compatible. Refer to the parent gem for additional documentation.
+
+![Recite: "boil, boil, toil and trouble..."](midler.jpg)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'middleware_variadic'
+gem 'midler'
 ```
 
 And then execute:
@@ -16,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install middleware_variadic
+    $ gem install midler
 
 ## Variadic Middleware Usage
 
@@ -24,9 +26,8 @@ This is where this fork of the gem really shines. We can now pass variadic argum
 
 ```ruby
 class JsonResponse
-  def initialize(app, value)
+  def initialize(app)
     @app   = app
-    @value = value
   end
 
   def call(request, response)
@@ -36,7 +37,7 @@ class JsonResponse
   end
 end
 
-stack = MiddlewareVariadic::Builder.new do
+stack = Midler::Builder.new do
   use JsonResponse
   use Authenticate
   use Authorized
@@ -70,7 +71,7 @@ end
 
 # Build the actual middleware stack which runs a sequence
 # of slightly different versions of our middleware.
-stack = MiddlewareVariadic::Builder.new do
+stack = Midler::Builder.new do
   use Trace, "A"
   use Trace, "B"
   use Trace, "C"
@@ -97,7 +98,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/middleware_variadic/fork )
+1. Fork it ( https://github.com/film42/midler/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

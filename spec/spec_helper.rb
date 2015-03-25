@@ -1,5 +1,5 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'middleware_variadic'
+require 'midler'
 
 # Do not buffer output
 $stdout.sync = true

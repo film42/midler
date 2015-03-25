@@ -1,4 +1,4 @@
-module MiddlewareVariadic
+module Midler
   # This provides a DSL for building up a stack of middlewares.
   #
   # This code is based heavily off of `Rack::Builder` and
@@ -8,7 +8,7 @@ module MiddlewareVariadic
   #
   # Building a middleware stack is very easy:
   #
-  #     app = MiddlewareVariadic::Builder.new do
+  #     app = Midler::Builder.new do
   #       use A
   #       use B
   #     end

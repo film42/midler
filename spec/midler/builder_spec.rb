@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe MiddlewareVariadic::Builder do
+describe Midler::Builder do
   let(:data) { { :data => [] } }
   let(:instance) { described_class.new }
 

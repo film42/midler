@@ -1,4 +1,4 @@
-module MiddlewareVariadic
+module Midler
   # This is a basic runner for middleware stacks. This runner does
   # the default expected behavior of running the middleware stacks
   # in order, then reversing the order.

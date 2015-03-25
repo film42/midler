@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe MiddlewareVariadic::Runner do
+describe Midler::Runner do
   it "should work with an empty stack" do
     instance = described_class.new([])
     expect { instance.call({}) }.to_not raise_error
