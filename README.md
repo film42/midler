@@ -36,7 +36,7 @@ class JsonResponse
   end
 end
 
-stack = Middleware::Builder.new do
+stack = MiddlewareVariadic::Builder.new do
   use JsonResponse
   use Authenticate
   use Authorized
@@ -70,7 +70,7 @@ end
 
 # Build the actual middleware stack which runs a sequence
 # of slightly different versions of our middleware.
-stack = Middleware::Builder.new do
+stack = MiddlewareVariadic::Builder.new do
   use Trace, "A"
   use Trace, "B"
   use Trace, "C"
