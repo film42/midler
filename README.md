@@ -23,8 +23,6 @@ Or install it yourself as:
 This is where this fork of the gem really shines. We can now pass variadic arguments in place of env. For example, we can now call the stack with a `request` and `response` for this express-style webserver example.
 
 ```ruby
-# Basic middleware that just prints the inbound and
-# outbound steps.
 class JsonResponse
   def initialize(app, value)
     @app   = app
